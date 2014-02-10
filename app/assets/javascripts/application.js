@@ -14,3 +14,39 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){
+    $('#login-trigger').click(function(){
+        $(this).next('#login-content').slideToggle();
+        $(this).toggleClass('active');
+
+        if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+        else $(this).find('span').html('&#x25BC;')
+    })
+    $('#signup-trigger').click(function(){
+        $(this).next('#signup-content').slideToggle();
+        $(this).toggleClass('active');
+
+        if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+        else $(this).find('span').html('&#x25BC;')
+    })
+    $("#submit").click(function(e){
+        e.preventDefault();
+        $.ajax({
+            datatype:'json' ,
+            data: $("#signup-form").serialize(),
+            type:'POST',
+            url:'user/new',
+
+            success: function(){
+            $("#success").show()
+            $("#error").hide()
+            },
+            error: function(){
+            $("#error").show()
+            $("#success").hide()
+            }
+        });
+    });
+})
