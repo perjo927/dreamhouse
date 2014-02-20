@@ -1,0 +1,2 @@
+module Concerns::SessionsControllerHelper
+end
