@@ -1,42 +1,51 @@
-<h1>HEADER</h1>
-<nav>
-    <ul>
-        <li class="formwindow">
-            <a id="login-trigger">
-                Log in <span>▼</span>
-            </a>
-            <div id="login-content">
-                <form>
-                    <fieldset id="login-form">
-                        <input class="username" type="email" name="email" placeholder="Your email address" required>
-                        <input class="password" type="password" name="password" placeholder="Password" required>
-                    </fieldset>
-                    <fieldset class="actions">
-                        <input type="submit" id="login" value="Log in">
-                        <label><input type="checkbox" checked="checked"> Keep me signed in</label>
-                    </fieldset>
-                </form>
-            </div>
-        </li>
-        <li class="formwindow">
-            <a id="signup-trigger">
-            Sign up <span>▼</span>
-            </a>
-            <div id="signup-content">
-                <form>
-                    <fieldset id="signup-form">
-                        <input class="username" type="email" name="email" placeholder="Your email address" required>
-                        <input class="password" type="password" name="password" placeholder="Password" required>
-                        <input id="password-confirm" type="password" name="password-confirm" placeholder="Password again" required>
-                    </fieldset>
-                    <fieldset class="actions">
-                        <input type="submit" id="submit" value="Sign up">
-                        <div id="error">Error, invalid information</div>
-                        <div id="success">Success! User created</div>
-                        <label><input type="checkbox" checked="checked"> Accept terms of service</label>
-                    </fieldset>
-                </form>
-            </div>
-        </li>
-    </ul>
-</nav>
+<header>
+    <div class="logo">
+       <%= link_to(image_tag("logo.png", :alt => "Logotype"), "/") %>
+        </div>
+    <nav>
+    <form id="search-form">
+        <input type="text" class="search-term">
+        <input type="submit" class="search-submit">
+    </form>
+    </div>
+        <ul>
+            <li class="formwindow">
+                <a id="login-trigger">
+                    Log in <span>▼</span>
+                </a>
+                <div id="login-content">
+                    <form>
+                        <fieldset id="login-form">
+                            <input class="username" type="email" name="email" placeholder="Your email address" required>
+                            <input class="password" type="password" name="password" placeholder="Password" required>
+                        </fieldset>
+                        <fieldset class="actions">
+                            <input type="submit" id="login" value="Log in">
+                            <label><input type="checkbox" checked="checked"> Keep me signed in</label>
+                        </fieldset>
+                    </form>
+                </div>
+            </li>
+            <li class="formwindow">
+                <a id="signup-trigger">
+                Sign up <span>▼</span>
+                </a>
+                <div id="signup-content">
+                    <form>
+                        <fieldset id="signup-form">
+                            <input class="username" type="email" name="email" placeholder="Your email address" required>
+                            <input class="password" type="password" name="password" placeholder="Password" required>
+                            <input id="password-confirm" type="password" name="password-confirm" placeholder="Password again" required>
+                        </fieldset>
+                        <fieldset class="actions">
+                            <input type="submit" id="submit" value="Sign up">
+                            <div id="error">Error, invalid information</div>
+                            <div id="success">Success! User created</div>
+                            <label><input type="checkbox" checked="checked"> Accept terms of service</label>
+                        </fieldset>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
