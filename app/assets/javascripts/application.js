@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= #require turbolinks
 //= require_tree .
 
 
@@ -40,12 +40,32 @@ $(document).ready(function(){
             url:'user/new',
 
             success: function(){
-            $("#success").show()
-            $("#error").hide()
+                $("#success").show();
+                $("#error").hide();
+                location.reload();
             },
             error: function(){
-            $("#error").show()
-            $("#success").hide()
+                $("#error").show();
+                $("#success").hide();
+            }
+        });
+    });
+    $("#login").click(function(e){
+        e.preventDefault();
+        $.ajax({
+            datatype:'json' ,
+            data: $("#login-form").serialize(),
+            type:'POST',
+            url:'user/login',
+
+            success: function(){
+                $("#success").show();
+                $("#error").hide();
+                location.reload();
+            },
+            error: function(){
+                $("#error").show();
+                $("#success").hide();
             }
         });
     });
