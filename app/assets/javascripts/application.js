@@ -18,18 +18,17 @@
 
 $(document).ready(function(){
     $('#login-trigger').click(function(){
+        $("#signup-trigger").next("#signup-content").slideUp("fast");
         $(this).next('#login-content').slideToggle();
         $(this).toggleClass('active');
 
-        if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
-        else $(this).find('span').html('&#x25BC;')
+       
     })
     $('#signup-trigger').click(function(){
+        $("#login-trigger").next("#login-content").slideUp("fast");
         $(this).next('#signup-content').slideToggle();
         $(this).toggleClass('active');
 
-        if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
-        else $(this).find('span').html('&#x25BC;')
     })
     $("#submit").click(function(e){
         e.preventDefault();

@@ -1,19 +1,21 @@
 <header>
     <div class="logo">
        <%= link_to(image_tag("logo.png", :alt => "Logotype"), "/") %>
-        </div>
-    <nav>
+    </div>
+    
     <form id="search-form">
         <input type="text" class="search-term">
-        <input type="submit" class="search-submit">
+        <input type="submit" class="search-submit" value="Search">
     </form>
-    </div>
+    
+    <div class="utility-buttons">
         <ul>
             <li class="formwindow">
                 <a id="login-trigger">
-                    Log in <span>▼</span>
+                    Log in
                 </a>
                 <div id="login-content">
+                    <h2>Login</h2>
                     <form>
                         <fieldset id="login-form">
                             <input class="username" type="email" name="email" placeholder="Your email address" required>
@@ -28,9 +30,10 @@
             </li>
             <li class="formwindow">
                 <a id="signup-trigger">
-                Sign up <span>▼</span>
+                Sign up
                 </a>
                 <div id="signup-content">
+                    <h2>Signup</h2>
                     <form>
                         <fieldset id="signup-form">
                             <input class="username" type="email" name="email" placeholder="Your email address" required>
@@ -47,5 +50,5 @@
                 </div>
             </li>
         </ul>
-    </nav>
+    </div>
 </header>

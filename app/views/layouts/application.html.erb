@@ -9,7 +9,11 @@
 <body>
 <%= render 'layouts/header' %>
 
-<%= yield %>
+<%= render 'layouts/left_nav' %>
+
+<div class="main">
+	<%= yield %>
+</div>				
 
 <%= render 'layouts/footer' %>
 </body>
