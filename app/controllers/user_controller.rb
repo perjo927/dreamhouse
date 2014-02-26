@@ -40,4 +40,9 @@ class UserController < ApplicationController
              :status=>'200'
     end
   end
+
+  def logout
+    reset_session
+    redirect_to :root
+  end
 end

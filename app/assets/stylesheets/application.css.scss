@@ -5,6 +5,9 @@
   margin: 0;
   padding: 0;
   border: 0;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
 }
 html{
   height: 100%;
@@ -40,11 +43,21 @@ header {
       margin-top: 18px;
       padding: 10px;
       background-color: #ed8000;
-      color: #222;
+      color: #fff;
       cursor: pointer;
     }
   }
   .utility-buttons {
+    .util-btn{
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      height: 25px;
+      padding: 0 8px;
+      text-decoration: none;
+      color: #fa9800;
+      cursor: pointer;  
+    }
     ul {
       margin: 25px 50px;
       padding: 0;
@@ -54,16 +67,6 @@ header {
     }
     li {
       float: left;
-    }
-    #login-trigger, #signup-trigger {
-      display: inline-block;
-      *display: inline;
-      *zoom: 1;
-      height: 25px;
-      padding: 0 8px;
-      text-decoration: none;
-      color: #fa9800;
-      cursor: pointer;
     }
 
 
@@ -295,6 +298,7 @@ header {
   padding: 10px;
 
   nav {
+    float: left;
     ul {
       li{
         list-style: none;
@@ -303,7 +307,40 @@ header {
           text-decoration: none;
           color: #1286b2;
           padding:5px 10px;
+          &:hover{
+            text-decoration: underline;
+          }
         }
+      }
+    }
+  }
+  .workspace-btn {
+    text-decoration: none;
+    color: #ed8000;
+    background-color: #222;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 15px;
+    float: left;
+    &:hover{
+      background-color: #292929;
+    }
+  }
+  .tools{
+    float: left;
+    width: 100%;
+    .tool {
+      float: left;
+      width: 40px;
+      height: 40px;
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      line-height: 40px;
+      margin: 5px 5px 0px 5px;
+      border-radius: 5px;
+      &:hover{
+        cursor: pointer;
       }
     }
   }
@@ -312,8 +349,7 @@ header {
 .main {
   padding: 10px;
   float: left;
-  max-width: 968px;
-  margin-left: 20px;
+  width: 968px;
 
   .home {
     .row {
@@ -369,6 +405,72 @@ header {
         p{
           text-align: justify;
           text-justify: newspaper;
+        }
+      }
+    }
+  }
+}
+
+.right-pane {
+  float:right;
+  width: 240px;
+  height: 90%;
+  background-color: #ccc;
+  font-size: 10pt;
+  .messages, .orders, .objects {
+    float: left;
+    height: 300px;
+    width: 100%;
+
+    h3 {
+      text-align: center; 
+      border-top: 1px solid #bbb;
+    }
+  }
+  .messages {
+    .message {
+      float: left;
+      padding: 7px 5px;
+      font-style: italic;
+      &:hover{
+        cursor: pointer;
+      }
+      span {
+        float: left;
+        &:first-child {
+          font-family: OpenSansBold;
+          font-style: normal;
+        }
+      }
+    }
+  }
+
+  .orders {
+    .order {
+      float: left;
+      padding: 7px 5px;
+      width: 100%;
+      .product {
+        color: #1286b2;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .cost {
+        float: right;
+      }
+    }
+  }
+
+  .objects {
+    .object {
+      float: left;
+      padding: 5px 7px;
+      width: 100%;
+      span{
+        color: #1286b2; 
+        &:hover {
+          cursor: pointer;
         }
       }
     }

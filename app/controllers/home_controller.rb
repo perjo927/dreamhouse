@@ -1,6 +1,15 @@
 class HomeController < ApplicationController
-  def index
-    @vari = ['test', 'testa', 'festa', 'aset']
-    render 'home/index'
+
+  def index	  	
+    if current_user.nil? 
+    	render 'home/index' 
+    else
+    	render 'home/account' 
+    end
   end
+
+  def workspace 
+  	render 'home/workspace'
+  end
+
 end

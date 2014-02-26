@@ -4,15 +4,16 @@
     </div>
     
     <form id="search-form">
-        <input type="text" class="search-term">
+        <input type="text" class="search-term" placeholder="Search term...">
         <input type="submit" class="search-submit" value="Search">
     </form>
     
     <div class="utility-buttons">
         <ul>
+        <% if current_user.nil? %>
             <li class="formwindow">
-                <a id="login-trigger">
-                    Log in
+                <a id="login-trigger" class="util-btn">
+                    Login
                 </a>
                 <div id="login-content">
                     <h2>Login</h2>
@@ -29,7 +30,7 @@
                 </div>
             </li>
             <li class="formwindow">
-                <a id="signup-trigger">
+                <a id="signup-trigger"  class="util-btn">
                 Sign up
                 </a>
                 <div id="signup-content">
@@ -49,6 +50,11 @@
                     </form>
                 </div>
             </li>
+            <% else %>
+            <li>
+                <a href="logout" class="logout util-btn">Logout</a>
+            </li>
+            <% end %>
         </ul>
     </div>
 </header>
