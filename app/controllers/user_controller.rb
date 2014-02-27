@@ -2,13 +2,22 @@ class UserController < ApplicationController
   def new
     #create new user
     @user = User.create(:email=>params[:email], :password=>params[:password])
+    if params[:object_id]
+      room = Room.find(params[:object_id])
+      room.user_id = @user.id
+      room.save
+    end
+    session[:user_id] = @user.id
+    if params[:not_json].nil?
+      render :json=>
+                 {
+                     :status=> 'ok',
 
-    render :json=>
-               {
-                   :status=> 'ok',
-
-               },
-           :status => '200'
+                 },
+             :status => '200'
+    else
+      redirect_to :root
+    end
 
   end
   def show
@@ -21,6 +30,12 @@ class UserController < ApplicationController
     @users = User.all
     render 'user/show'
   end
+
+  def register
+
+    render 'user/register'
+  end
+
   def login
     email = params[:email]
     password = params[:password]
@@ -44,5 +59,9 @@ class UserController < ApplicationController
   def logout
     reset_session
     redirect_to :root
+  end
+  def showmessage
+    @message = Message.find(params[:id])
+     render 'user/message'
   end
 end

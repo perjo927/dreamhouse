@@ -22,7 +22,7 @@ $(document).ready(function(){
         $(this).next('#login-content').slideToggle();
         $(this).toggleClass('active');
 
-       
+
     })
     $('#signup-trigger').click(function(){
         $("#login-trigger").next("#login-content").slideUp("fast");
@@ -68,4 +68,24 @@ $(document).ready(function(){
             }
         });
     });
-})
+    $("#send").click(function(e){
+        e.preventDefault();
+        $.ajax({
+            datatype:'json' ,
+            data: $("#message-form").serialize(),
+            type:'POST',
+            url:'/hantverkare/sendmessage',
+
+            success: function(){
+                $("#success").show();
+                $("#error").hide();
+                location.reload();
+            },
+            error: function(){
+                $("#error").show();
+                $("#success").hide();
+            }
+        });
+    });
+
+});

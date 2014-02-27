@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
   validates_presence_of :email
   validates_uniqueness_of :email
 
+  has_many :messages
+  has_many :rooms
+
   def self.authenticate(email, password)
     user = find_by_email(email)
     if user && user.password == password

@@ -1,0 +1,2 @@
+module HantverkareHelper
+end

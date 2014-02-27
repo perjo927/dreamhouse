@@ -1,0 +1,14 @@
+ <h2>Please Register to save an object</h2>
+<form action="/user/new" method = "post">
+    <input class="username" type="email" name="email" placeholder="Your email address" required>
+    <input class="password" type="password" name="password" placeholder="Password" required>
+    <input type="hidden" name="object_id"  value="<%= params[:id] %>">
+    <input type="hidden" name="not_json" value="true">
+    <input name="authenticity_token" type="hidden" value="token_value">
+    <fieldset class="actions">
+        <input type="submit" id="submit" value="Sign up">
+        <div id="error">Error, invalid information</div>
+        <div id="success">Success! User created</div>
+        <label><input type="checkbox" checked="checked"> Accept terms of service</label>
+    </fieldset>
+</form>

@@ -3,9 +3,10 @@
        <%= link_to(image_tag("logo.png", :alt => "Logotype"), "/") %>
     </div>
     
-    <form id="search-form">
-        <input type="text" class="search-term" placeholder="Search term...">
+    <form id="search-form" action="/search" method="post">
+        <input type="text" class="search-term" name="search_term" placeholder="Search term...">
         <input type="submit" class="search-submit" value="Search">
+        <input name="authenticity_token" type="hidden" value="token_value">
     </form>
     
     <div class="utility-buttons">
@@ -52,7 +53,7 @@
             </li>
             <% else %>
             <li>
-                <a href="logout" class="logout util-btn">Logout</a>
+                <a href="/logout" class="logout util-btn">Logout</a>
             </li>
             <% end %>
         </ul>

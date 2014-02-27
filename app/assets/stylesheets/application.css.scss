@@ -1,3 +1,8 @@
+//
+//
+//=require_tree .
+//
+
 @font-face { font-family: OpenSans; src: url('/assets/OpenSans-Regular.ttf'); }
 @font-face { font-family: OpenSansBold; src: url('/assets/OpenSans-Bold.ttf'); }
 @font-face { font-family: OpenSansLight; src: url('/assets/OpenSans-Light.ttf'); }
@@ -482,6 +487,8 @@ footer {
   height: 70px;
   float: left;
   background-color: #222;
+  position: absolute;
+  bottom: 0;
   p{
     color: #ccc;
     text-align: center;

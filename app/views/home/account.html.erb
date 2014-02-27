@@ -8,84 +8,21 @@
 <div class="right-pane">
 	<div class="messages">
 		<h3>Messages</h3>
-		<div class="message">
-			<span>From: Dan</span>
-			<span class="message-text">You should choose another material ..</span>
-		</div>
-		<div class="message">
-			<span>From: Martin</span>
-			<span class="message-text">You should choose another material ..</span>
-		</div>
-		<div class="message">
-			<span>From: Per</span>
-			<span class="message-text">You should choose another material ..</span>
-		</div>
-		<div class="message">
-			<span>From: Fabian</span>
-			<span class="message-text">You should choose another material ..</span>
-		</div>
-		<div class="message">
-			<span>From: Maahkus</span>
-			<span class="message-text">You should choose another material ..</span>
-		</div>
+        <% for message in @messages %>
+            <div class="message">
+                <a href= "user/message/show/<%= message.id%>"><span><% unless message.read %> **UNREAD** <% end %> Title: <%= message.title %></span> </a>
+                <span class="message-text"><%= message.message %></span>
+            </div>
+        <% end %>
 	</div>
-	<div class="orders">
-		<h3>Orders</h3>
-		<div class="order">
-			<span class="product">100 Nails</span>
-			<span class="cost">1000 $</span>
-		</div>
-		<div class="order">
-			<span class="product">100 Nails</span>
-			<span class="cost">1000 $</span>
-		</div>
-		<div class="order">
-			<span class="product">100 Nails</span>
-			<span class="cost">1000 $</span>
-		</div>
-		<div class="order">
-			<span class="product">100 Nails</span>
-			<span class="cost">1000 $</span>
-		</div>
-		<div class="order">
-			<span class="product">100 Nails</span>
-			<span class="cost">1000 $</span>
-		</div>
-		<div class="order">
-			<span class="product">100 Nails</span>
-			<span class="cost">1000 $</span>
-		</div>
-		<div class="order">
-			<span class="product">100 Nails</span>
-			<span class="cost">1000 $</span>
-		</div>
-		<div class="order">
-			<span class="product">100 Nails</span>
-			<span class="cost">1000 $</span>
-		</div>
-	</div>
+
 	<div class="objects">
-		<h3>Objects</h3>
-		<div class="object">
-			<span>Kitchen</span>
-		</div>
-		<div class="object">
-			<span>Livingroom</span>
-		</div>
-		<div class="object">
-			<span>Master bedroom</span>
-		</div>
-		<div class="object">
-			<span>Small bedroom</span>
-		</div>
-		<div class="object">
-			<span>Toilet</span>
-		</div>
-		<div class="object">
-			<span>Special furniture</span>
-		</div>
-		<div class="object">
-			<span>Brain</span>
-		</div>
+		<h3>Saved Objects</h3>
+        <% for object in @objects %>
+            <div class="object">
+                <span><%= object.name %></span>
+            </div>
+        <% end %>
+
 	</div>
 </div>

@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140210135441) do
+ActiveRecord::Schema.define(version: 20140227142247) do
+
+  create_table "messages", force: true do |t|
+    t.string   "title"
+    t.string   "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "read"
+    t.integer  "user_id"
+  end
+
+  create_table "rooms", force: true do |t|
+    t.string   "name"
+    t.string   "room_type"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email"
