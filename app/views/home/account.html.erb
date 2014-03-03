@@ -1,28 +1,5 @@
-<%= render 'layouts/account_left_nav' %>
 <div class="main">
 	<div class="account">
-		<h1>Your Account </h1>
 	</div>
 </div>
 
-<div class="right-pane">
-	<div class="messages">
-		<h3>Messages</h3>
-        <% for message in @messages %>
-            <div class="message">
-                <a href= "user/message/show/<%= message.id%>"><span><% unless message.read %> **UNREAD** <% end %> Title: <%= message.title %></span> </a>
-                <span class="message-text"><%= message.message %></span>
-            </div>
-        <% end %>
-	</div>
-
-	<div class="objects">
-		<h3>Saved Objects</h3>
-        <% for object in @objects %>
-            <div class="object">
-                <span><%= object.name %></span>
-            </div>
-        <% end %>
-
-	</div>
-</div>

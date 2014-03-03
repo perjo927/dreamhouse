@@ -22,17 +22,22 @@ class UserController < ApplicationController
   end
   def show
     #displays all users
-     @users = User.all
+    @users = User.all
+    @messages = current_user.messages
+    @objects = current_user.rooms
     render 'user/show'
   end
   def index
     #displays all users
     @users = User.all
+    @messages = current_user.messages
+    @objects = current_user.rooms
     render 'user/show'
   end
 
   def register
-
+    @messages = current_user.messages
+    @objects = current_user.rooms
     render 'user/register'
   end
 
@@ -62,6 +67,8 @@ class UserController < ApplicationController
   end
   def showmessage
     @message = Message.find(params[:id])
-     render 'user/message'
+    @messages = current_user.messages
+    @objects = current_user.rooms
+    render 'user/message'
   end
 end

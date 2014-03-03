@@ -1,12 +1,17 @@
 class HantverkareController < ApplicationController
   def showmessage
-    @messages = Message.all
+    @messages = current_user.messages
+    @objects = current_user.rooms
     render 'hantverkare/showmessage'
   end
   def show
+    @messages = current_user.messages
+    @objects = current_user.rooms
     render 'hantverkare/show'
   end
   def message
+    @messages = current_user.messages
+    @objects = current_user.rooms
     render 'hantverkare/sendmessage'
   end
   def sendmessage

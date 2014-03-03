@@ -1,15 +1,27 @@
-<h1>Send Message</h1>
 <form id="message-form">
-    <fieldset id="message-form">
-        <input class="rubrik" type="text" name="title" placeholder="Rubrik" required>
-        <input class="meddelande" type="text" name="message" placeholder="Type your message" required>
-        <input name="authenticity_token" type="hidden" value="token_value">
+	<h1>Send Message</h1>
+	<fieldset>
+		<label for="receiver">To: </label>
+		<input class="receiver" type="text" name="receiver" value="Börje Byggman" disabled="disabled">
+	</fieldset>
+
+	<fieldset>
+		<label for="title" >Title: </label>
+	    <input class="rubrik" type="text" name="title" placeholder="Title.." required autofocus>
+	</fieldset>
+
+	<fieldset>
+	    <label for="message">Message: </label>
+	    <textarea class="meddelande" type="text" name="message" placeholder="Type your message.." required></textarea>
     </fieldset>
-    <fieldset class="actions">
-        <input type="submit" id="send" value="send">
+
+	<input name="authenticity_token" type="hidden" value="token_value">
+
+	<fieldset>
+		<input type="submit" id="send" value="Send">
+		<input type="reset" id="reset" value="Reset">	    
     </fieldset>
 </form>
 <div id="success">Message sent!</div>
 <div id="error">Message failed</div>
-</div>
-</li>
+
