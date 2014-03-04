@@ -16,7 +16,7 @@ class HantverkareController < ApplicationController
   end
   def sendmessage
     msg = 'Vad kul att du kontaktade mig. Självklart skulle jag kunna ge dig rabatt på det här arbetet. Blir fyra kronor bra?'
-    title = 'Re: Rabatt'
+    title = "Re: #{params[:title]}"
     @message = Message.create(:title=>title, :message=>msg, :read => false, :user_id => current_user.id)
 
     render :json=>

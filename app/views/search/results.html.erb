@@ -9,10 +9,10 @@
             <% for room in @rooms %>
                 <div class="grid-third">
                     <h3><%= room.name %></h3>
-                    <p>
+                    <p class="desc">
                         <%= room.description %>
                     </p>
-                    <h4><a href="/room/save/<%= room.id %>">Spara </a> </h4>
+                    <a href="/room/save/<%= room.id %>" class="btn">Spara </a>
                 </div>
             <% end %>
         </div>
