@@ -65,6 +65,8 @@ class UserController < ApplicationController
   end
   def showmessage
     @message = Message.find(params[:id])
+    @message.read = true
+    @message.save
     @messages = current_user.messages
     @objects = current_user.rooms
     render 'user/message'

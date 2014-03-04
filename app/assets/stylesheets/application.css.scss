@@ -116,31 +116,31 @@ header {
       width: 250px;
     }
 
-   #signup-content {
-    display: none;
-    position: absolute;
-    top: 24px;
-    right: 0;
-    z-index: 999;
-    background: #fff;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
-    background-image: -webkit-linear-gradient(top, white, #eeeeee);
-    background-image: -moz-linear-gradient(top, white, #eeeeee);
-    background-image: -ms-linear-gradient(top, white, #eeeeee);
-    background-image: -o-linear-gradient(top, white, #eeeeee);
-    background-image: linear-gradient(top, white, #eeeeee);
-    padding: 15px;
-    -moz-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.9);
-    -webkit-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.9);
-    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.9);
-    -moz-border-radius: 3px 0 3px 3px;
-    -webkit-border-radius: 3px 0 3px 3px;
-    border-radius: 3px 0 3px 3px;
-  }
-  li #signup-content {
-    right: 0;
-    width: 250px;
-  }
+    #signup-content {
+      display: none;
+      position: absolute;
+      top: 24px;
+      right: 0;
+      z-index: 999;
+      background: #fff;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+      background-image: -webkit-linear-gradient(top, white, #eeeeee);
+      background-image: -moz-linear-gradient(top, white, #eeeeee);
+      background-image: -ms-linear-gradient(top, white, #eeeeee);
+      background-image: -o-linear-gradient(top, white, #eeeeee);
+      background-image: linear-gradient(top, white, #eeeeee);
+      padding: 15px;
+      -moz-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.9);
+      -webkit-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.9);
+      box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.9);
+      -moz-border-radius: 3px 0 3px 3px;
+      -webkit-border-radius: 3px 0 3px 3px;
+      border-radius: 3px 0 3px 3px;
+    }
+    li #signup-content {
+      right: 0;
+      width: 250px;
+    }
   }
   /*--------------------*/
 
@@ -362,17 +362,94 @@ header {
 }
 
 .container {
-    width: 100%;
-    min-height: 100% !important;
-    text-align: center;
-    padding-bottom: 70px;
-    height: auto;
+  width: 100%;
+  min-height: 100% !important;
+  text-align: center;
+  padding-bottom: 70px;
+  height: auto;
 }
 .main {
   padding: 10px;
   width: 968px;
   margin: 0 auto;
   display: inline-block;
+  h1{
+    margin-bottom: 10px;
+  }
+  .messages {
+    float: left;
+    min-height: 100%;
+    width: 300px;
+    .msg-title{
+      width: 100%;
+      float: left;
+      background-color: #222;
+      padding: 4px;
+      border-radius: 3px;
+      font-size: 10pt;
+      a{
+        color: #ed8000;
+        text-decoration: none;
+        &:hover{
+          color: #eee;
+        }
+      }
+    }
+    .msg-message {
+      float: left;
+      padding: 7px;
+      text-align: left;
+      background-color: #ddd;
+      width: 100%;
+      margin-bottom: 5px;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      height: 70px;
+      white-space: nowrap;
+      overflow: hidden;
+      .sender {
+        padding-top: 10px;
+        font-size: 8pt;
+        font-style: italic;
+        margin-top: 15px;
+      }
+    }
+  }
+  .current-msg{
+    float: left;
+    width: 590px;
+    min-height: 100% !important;
+    margin-left: 50px;
+    .curr-msg-title {
+      width: 100%;
+      font-size: 10pt;
+      padding: 15px;
+      background-color: #222;
+      color: #ddd;
+      border-radius: 3px;
+      float: left;
+    }  
+    .curr-msg-message {
+      float: left;
+      text-align: left;
+      background-color: #ddd;
+      width: 100%;
+      min-height: 500px !important;
+      padding: 5px;
+     // height: 500px;
+      position: relative;
+      .sender {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-top: 10px;
+        font-size: 8pt;
+        font-style: italic;
+        width: 100%;
+      }
+    }
+
+  }
   form {
     margin: 50px auto;
     width: 600px;
@@ -433,6 +510,8 @@ header {
   }
 
   .home {
+
+
     .row {
       float: left;
       width: 100%;
@@ -518,14 +597,22 @@ header {
       float: left;
       padding: 7px 5px;
       font-style: italic;
-      &:hover{
-        cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 95%;
+
+      a{
+        color: #1286b2;
       }
       span {
-        float: left;
+        float: left;  
         &:first-child {
           font-family: OpenSansBold;
           font-style: normal;
+          width: 100%;
+          text-align: left;
+
         }
       }
     }

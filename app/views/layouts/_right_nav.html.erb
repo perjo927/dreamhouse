@@ -3,8 +3,8 @@
 		<h3>Messages</h3>
         <% for message in @messages %>
             <div class="message">
-                <a href= "/user/message/show/<%= message.id%>"><span><% unless message.read %> **UNREAD** <% end %> Title: <%= message.title %></span> </a>
-                <span class="message-text"><%= message.message %></span>
+                <a href= "/user/message/show/<%= message.id%>"><span><% unless message.read %> #UNREAD# <% end %> <%= message.title %> </span> </a>
+                <span class="message-text"> <%= message.message %></span>
             </div>
         <% end %>
 	</div>

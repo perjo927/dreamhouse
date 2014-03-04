@@ -36,7 +36,7 @@ $(document).ready(function(){
             datatype:'json' ,
             data: $("#signup-form").serialize(),
             type:'POST',
-            url:'user/new',
+            url:'/user/new',
 
             success: function(){
                 $("#success").show();
@@ -55,12 +55,12 @@ $(document).ready(function(){
             datatype:'json' ,
             data: $("#login-form").serialize(),
             type:'POST',
-            url:'user/login',
+            url:'/user/login',
 
             success: function(){
                 $("#success").show();
                 $("#error").hide();
-                location.reload();
+                location.href = "/";
             },
             error: function(){
                 $("#error").show();

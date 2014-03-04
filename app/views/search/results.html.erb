@@ -1,20 +1,21 @@
 <h1>Search Results</h1>
 <div class="main">
     <div class="home">
-        <div class="row">
+        <!--<div class="row">
                 <h1>Search term: <%= params[:search_term] %></h1>
-        </div>
+        </div> -->
 
         <div class="row">
             <% for room in @rooms %>
-            <div class="grid-third">
-                <h3><%= room.name %></h3>
-                <p>
-                    <%= room.description %>
-                </p>
-                <h4><a href="/room/save/<%= room.id %>">Spara </a> </h4>
-            </div>
-                <% end %>
+                <div class="grid-third">
+                    <h3><%= room.name %></h3>
+                    <p>
+                        <%= room.description %>
+                    </p>
+                    <h4><a href="/room/save/<%= room.id %>">Spara </a> </h4>
+                </div>
+            <% end %>
         </div>
+        
     </div>
 </div>
