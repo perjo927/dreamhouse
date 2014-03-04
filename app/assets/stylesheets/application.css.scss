@@ -22,11 +22,19 @@ body{
   font-size: 10pt;
   height: 100%;
 }
+
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
 header {
   height: 70px;
   background-color: #222;
   width: 100%;
   float: left;
+  position: relative;
+  z-index: 1000;
   .logo {
     float: left;
     width: 366px;
@@ -299,8 +307,11 @@ header {
   float: left;
   width: 240px;
   background-color: #ccc;
-  height: 88%;
+  min-height: 100% !important;
   padding: 10px;
+  position: absolute;
+  padding-top: 70px;
+  z-index: 10;
   nav {
     float: left;
     ul {
@@ -352,8 +363,10 @@ header {
 
 .container {
     width: 100%;
-    height: 100%;
+    min-height: 100% !important;
     text-align: center;
+    padding-bottom: 70px;
+    height: auto;
 }
 .main {
   padding: 10px;
@@ -482,9 +495,14 @@ header {
 .right-pane {
   float:right;
   width: 240px;
-  height: 90%;
   background-color: #ccc;
   font-size: 10pt;
+  position: absolute;
+  z-index: 100;
+  right:0;
+  top: 0;
+  min-height: 100% !important;
+  padding-top: 70px;
   .messages, .orders, .objects {
     float: left;
     height: 300px;
@@ -551,7 +569,9 @@ footer {
   float: left;
   background-color: #222;
   position: absolute;
+  left: 0;
   bottom: 0;
+  z-index: 1000;
   p{
     color: #ccc;
     text-align: center;
