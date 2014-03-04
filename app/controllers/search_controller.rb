@@ -4,7 +4,7 @@ class SearchController < ApplicationController
     
 
     unless current_user.nil? 
-	    @messages = current_user.messages
+	    @messages = current_user.recent_messages
 	    @objects = current_user.rooms
     end
     render 'search/results'

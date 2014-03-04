@@ -12,4 +12,5 @@ class Room < ActiveRecord::Base
            :status => '200'
 
   end
+
 end

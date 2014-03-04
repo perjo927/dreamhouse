@@ -23,14 +23,14 @@ class UserController < ApplicationController
   def show
     #displays all users
     @users = User.all
-    @messages = current_user.messages
+    @messages = current_user.recent_messages
     @objects = current_user.rooms
     render 'user/show'
   end
   def index
     #displays all users
     @users = User.all
-    @messages = current_user.messages
+    @messages = current_user.recent_messages
     @objects = current_user.rooms
     render 'user/show'
   end
@@ -67,8 +67,15 @@ class UserController < ApplicationController
     @message = Message.find(params[:id])
     @message.read = true
     @message.save
-    @messages = current_user.messages
+    @messages = current_user.recent_messages
     @objects = current_user.rooms
     render 'user/message'
+  end
+
+  def showobject
+    @messages = current_user.recent_messages
+    @objects = current_user.rooms
+    @object = Room.find(params[:id])
+    render 'user/show_object'
   end
 end

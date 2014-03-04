@@ -18,16 +18,13 @@
 
 $(document).ready(function(){
     $('#login-trigger').click(function(){
-        $("#signup-trigger").next("#signup-content").slideUp("fast");
         $(this).next('#login-content').slideToggle();
         $(this).toggleClass('active');
 
 
     })
-    $('#signup-trigger').click(function(){
-        $("#login-trigger").next("#login-content").slideUp("fast");
-        $(this).next('#signup-content').slideToggle();
-        $(this).toggleClass('active');
+    $('#cancel-login').click(function(){
+       $('#login-trigger').next('#login-content').slideToggle('fast');
 
     })
     $("#submit").click(function(e){

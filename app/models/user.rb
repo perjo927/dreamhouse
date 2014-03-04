@@ -18,4 +18,8 @@ class User < ActiveRecord::Base
     end
   end
 
+  def recent_messages
+    messages.order('created_at desc').limit(5)
+  end
+
 end

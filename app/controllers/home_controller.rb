@@ -4,7 +4,7 @@ class HomeController < ApplicationController
     if current_user.nil? 
       render 'home/index' 
     else
-      @messages = current_user.messages
+      @messages = current_user.recent_messages
       @objects = current_user.rooms
       render 'home/account' 
     end

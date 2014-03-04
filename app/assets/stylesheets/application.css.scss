@@ -91,71 +91,33 @@ header {
       background: #fff;
     }
     #login-content {
+      box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
       display: none;
       position: absolute;
       top: 24px;
       right: 0;
       z-index: 999;
-      background: #fff;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
-      background-image: -webkit-linear-gradient(top, white, #eeeeee);
-      background-image: -moz-linear-gradient(top, white, #eeeeee);
-      background-image: -ms-linear-gradient(top, white, #eeeeee);
-      background-image: -o-linear-gradient(top, white, #eeeeee);
-      background-image: linear-gradient(top, white, #eeeeee);
+      background: #ddd;
       padding: 15px;
-      -moz-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.9);
-      -webkit-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.9);
-      box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.9);
-      -moz-border-radius: 3px 0 3px 3px;
-      -webkit-border-radius: 3px 0 3px 3px;
-      border-radius: 3px 0 3px 3px;
+      border-radius: 3px;
+      width: 600px;
     }
     li #login-content {
       right: 0;
       width: 250px;
     }
 
-    #signup-content {
-      display: none;
-      position: absolute;
-      top: 24px;
-      right: 0;
-      z-index: 999;
-      background: #fff;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
-      background-image: -webkit-linear-gradient(top, white, #eeeeee);
-      background-image: -moz-linear-gradient(top, white, #eeeeee);
-      background-image: -ms-linear-gradient(top, white, #eeeeee);
-      background-image: -o-linear-gradient(top, white, #eeeeee);
-      background-image: linear-gradient(top, white, #eeeeee);
-      padding: 15px;
-      -moz-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.9);
-      -webkit-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.9);
-      box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.9);
-      -moz-border-radius: 3px 0 3px 3px;
-      -webkit-border-radius: 3px 0 3px 3px;
-      border-radius: 3px 0 3px 3px;
-    }
-    li #signup-content {
-      right: 0;
-      width: 250px;
-    }
+   
   }
   /*--------------------*/
 
   #login-form input {
-    background: #f1f1f1;
-    padding: 6px 5px;
-    margin: 0 0 5px 0;
-    width: 238px;
-    border: 1px solid #ccc;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    -moz-box-shadow: 0 1px 1px #ccc inset;
-    -webkit-box-shadow: 0 1px 1px #ccc inset;
-    box-shadow: 0 1px 1px #ccc inset;
+    background: #fff;
+    width: 100%;
+    padding: 10px 7px;
+    margin-bottom: 5px;
+    border: 1px solid #cdcdcd;
+
     &:focus {
       background-color: #fff;
       border-color: #e8c291;
@@ -165,27 +127,7 @@ header {
       box-shadow: 0 0 0 1px #e8c291 inset;
     }
   }
-  #signup-form input {
-    background: #f1f1f1;
-    padding: 6px 5px;
-    margin: 0 0 5px 0;
-    width: 238px;
-    border: 1px solid #ccc;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    -moz-box-shadow: 0 1px 1px #ccc inset;
-    -webkit-box-shadow: 0 1px 1px #ccc inset;
-    box-shadow: 0 1px 1px #ccc inset;
-    &:focus {
-      background-color: #fff;
-      border-color: #e8c291;
-      outline: none;
-      -moz-box-shadow: 0 0 0 1px #e8c291 inset;
-      -webkit-box-shadow: 0 0 0 1px #e8c291 inset;
-      box-shadow: 0 0 0 1px #e8c291 inset;
-    }
-  }
+ 
 
   /*--------------------*/
 
@@ -193,106 +135,30 @@ header {
     .actions {
       margin: 10px 0 0 0;
     }
-    #submit {
-      background-color: #d14545;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(#e97171), to(#d14545));
-      background-image: -webkit-linear-gradient(top, #e97171, #d14545);
-      background-image: -moz-linear-gradient(top, #e97171, #d14545);
-      background-image: -ms-linear-gradient(top, #e97171, #d14545);
-      background-image: -o-linear-gradient(top, #e97171, #d14545);
-      background-image: linear-gradient(top, #e97171, #d14545);
-      -moz-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      border-radius: 3px;
-      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-      -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
-      -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
-      border: 1px solid #7e1515;
-      float: left;
-      height: 30px;
-      padding: 0;
-      width: 100px;
-      cursor: pointer;
-      color: #fff;
-      &:hover, &:focus {
-        background-color: #e97171;
-        background-image: -webkit-gradient(linear, left top, left bottom, from(#d14545), to(#e97171));
-        background-image: -webkit-linear-gradient(top, #d14545, #e97171);
-        background-image: -moz-linear-gradient(top, #d14545, #e97171);
-        background-image: -ms-linear-gradient(top, #d14545, #e97171);
-        background-image: -o-linear-gradient(top, #d14545, #e97171);
-        background-image: linear-gradient(top, #d14545, #e97171);
-      }
-      &:active {
-        outline: none;
-        -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
-        -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
-      }
-      &::-moz-focus-inner {
-        border: none;
-      }
-    }
-    label {
-      float: right;
-      line-height: 30px;
-      input {
-        position: relative;
-        top: 2px;
-        right: 2px;
-      }
-    }
+    
     #login {
-      background-color: #d14545;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(#e97171), to(#d14545));
-      background-image: -webkit-linear-gradient(top, #e97171, #d14545);
-      background-image: -moz-linear-gradient(top, #e97171, #d14545);
-      background-image: -ms-linear-gradient(top, #e97171, #d14545);
-      background-image: -o-linear-gradient(top, #e97171, #d14545);
-      background-image: linear-gradient(top, #e97171, #d14545);
-      -moz-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      border-radius: 3px;
-      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-      -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
-      -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
-      border: 1px solid #7e1515;
-      float: left;
-      height: 30px;
-      padding: 0;
-      width: 100px;
+      background-color: #ed8000;
+      color: #eee;
+      padding: 7px 5px;
+      width: 73%;
+      height: 40px;
+      margin-bottom: 5px;
       cursor: pointer;
-      color: #fff;
-      &:hover, &:focus {
-        background-color: #e97171;
-        background-image: -webkit-gradient(linear, left top, left bottom, from(#d14545), to(#e97171));
-        background-image: -webkit-linear-gradient(top, #d14545, #e97171);
-        background-image: -moz-linear-gradient(top, #d14545, #e97171);
-        background-image: -ms-linear-gradient(top, #d14545, #e97171);
-        background-image: -o-linear-gradient(top, #d14545, #e97171);
-        background-image: linear-gradient(top, #d14545, #e97171);
-      }
-      &:active {
-        outline: none;
-        -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
-        -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
-      }
-      &::-moz-focus-inner {
-        border: none;
-      }
+      border-radius: 3px;
+      float: left;
     }
-    label {
+    #cancel-login{
       float: right;
-      line-height: 30px;
-      input {
-        position: relative;
-        top: 2px;
-        right: 2px;
-      }
+      width: 25%;
+      padding: 7px 5px;
+      height: 40px;
+      border-radius: 3px;
+      background-color: #222;
+      color: #eee;
+      text-align: center;
+      cursor: pointer;
     }
+    
     #error{
       background-color: lightcoral;
       display: none;
@@ -434,15 +300,15 @@ header {
       text-align: left;
       background-color: #ddd;
       width: 100%;
-      min-height: 500px !important;
-      padding: 5px;
-     // height: 500px;
+      min-height: 100px;
+      padding: 5px 5px 30px 5px;
       position: relative;
+
       .sender {
         position: absolute;
         bottom: 0;
         left: 0;
-        padding-top: 10px;
+        padding: 10px;
         font-size: 8pt;
         font-style: italic;
         width: 100%;
@@ -640,6 +506,9 @@ header {
       float: left;
       padding: 5px 7px;
       width: 100%;
+      a {
+        text-decoration: none;
+      }
       span{
         color: #1286b2; 
         &:hover {

@@ -25,31 +25,15 @@
                         </fieldset>
                         <fieldset class="actions">
                             <input type="submit" id="login" value="Log in">
-                            <label><input type="checkbox" checked="checked"> Keep me signed in</label>
+                            <input id="cancel-login" value="Cancel">
                         </fieldset>
                     </form>
                 </div>
             </li>
             <li class="formwindow">
-                <a id="signup-trigger"  class="util-btn">
+                <a href="/register" id="signup-trigger"  class="util-btn">
                 Sign up
                 </a>
-                <div id="signup-content">
-                    <h2>Signup</h2>
-                    <form>
-                        <fieldset id="signup-form">
-                            <input class="username" type="email" name="email" placeholder="Your email address" required>
-                            <input class="password" type="password" name="password" placeholder="Password" required>
-                            <input id="password-confirm" type="password" name="password-confirm" placeholder="Password again" required>
-                        </fieldset>
-                        <fieldset class="actions">
-                            <input type="submit" id="submit" value="Sign up">
-                            <div id="error">Error, invalid information</div>
-                            <div id="success">Success! User created</div>
-                            <label><input type="checkbox" checked="checked"> Accept terms of service</label>
-                        </fieldset>
-                    </form>
-                </div>
             </li>
             <% else %>
             <li>
