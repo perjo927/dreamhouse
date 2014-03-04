@@ -1,14 +1,24 @@
- <h2>Please Register to save an object</h2>
+<h2>Please Register to save an object</h2>
+<div id="error">Error, invalid information</div>
+<div id="success">Success! User created</div>
 <form action="/user/new" method = "post">
-    <input class="username" type="email" name="email" placeholder="Your email address" required>
-    <input class="password" type="password" name="password" placeholder="Password" required>
+    <fieldset>
+        <label for="email">Email: </label>
+        <input class="username" type="email" name="email" placeholder="Email@Example.com.." required autofocus>
+    </fieldset>
+    <fieldset>
+        <label for="password">Password: </label>
+        <input class="password" type="password" name="password" placeholder="Password.." required>
+    </fieldset>
+    <fieldset>
+        <label for="password_again">Password again: </label>
+        <input class="password" type="password" name="password_again" placeholder="Password again.." required>
+    </fieldset>
     <input type="hidden" name="object_id"  value="<%= params[:id] %>">
     <input type="hidden" name="not_json" value="true">
     <input name="authenticity_token" type="hidden" value="token_value">
-    <fieldset class="actions">
+    <fieldset>
         <input type="submit" id="submit" value="Sign up">
-        <div id="error">Error, invalid information</div>
-        <div id="success">Success! User created</div>
-        <label><input type="checkbox" checked="checked"> Accept terms of service</label>
+        <input type="reset" value="Reset">             
     </fieldset>
 </form>

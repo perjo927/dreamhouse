@@ -36,8 +36,6 @@ class UserController < ApplicationController
   end
 
   def register
-    @messages = current_user.messages
-    @objects = current_user.rooms
     render 'user/register'
   end
 

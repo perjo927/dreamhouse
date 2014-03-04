@@ -386,7 +386,7 @@ header {
         float: left;
         clear: left;
         text-align: right;
-        width: 50px;
+        width: 100px;
         line-height: 50px;
       }
       textarea{
@@ -402,7 +402,7 @@ header {
       }
       input {
         float: left;
-        &[type="text"] {
+        &[type="text"], &[type="email"], &[type="password"] {
           border: 1px solid #cdcdcd;
           padding: 13px 7px;
           margin-left: 15px; 
@@ -425,7 +425,7 @@ header {
         &[type="submit"]{
           background-color: #ed8000;
           color: #eee;
-          margin-left: 65px;
+          margin-left: 115px;
           margin-right: 20px;
         }
       }
