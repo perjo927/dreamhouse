@@ -316,6 +316,30 @@ header {
     }
 
   }
+  .reply{
+      width: 590px;
+      float: left;
+      margin-left: 50px;
+      margin-top: 10px;
+      form {
+        margin: 0;
+      }
+      .reply-msg{
+        width: 100%;
+        min-height: 100px;
+        float: left;
+        border: 1px solid #ccc;
+        padding: 7px;
+        border-radius: 3px;
+        resize: vertical;
+        font-family: OpenSansLight;
+      }
+      .reply-btn {
+        float: left;
+        width: 100%;
+        margin: 5px 0px;
+      }
+    }
   form {
     margin: 50px auto;
     width: 600px;

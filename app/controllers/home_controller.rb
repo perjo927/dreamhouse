@@ -10,7 +10,9 @@ class HomeController < ApplicationController
     end
   end
 
-  def workspace 
+  def workspace
+    @messages = current_user.recent_messages
+    @objects = current_user.rooms 
     render 'home/workspace'
   end
 

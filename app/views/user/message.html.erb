@@ -1,5 +1,6 @@
-<h1>Messages</h1>
+
 <div class="messages">
+	<h3>Messages</h3>	
 	<% for message in @messages do %>
 	<div class="msg-title">
 		<a href="/user/message/show/<%= message.id %>"><%= message.title %></a>
@@ -12,6 +13,7 @@
 </div>
 
 <div class="current-msg">
+<h3>View Message</h3>	
 	<div class="curr-msg-title">
 		<%= @message.title %>
 	</div>
@@ -19,4 +21,12 @@
 		<p><%= @message.message %></p>
 		<div class="sender">From: Börje Byggman</div>
 	</div>	
+</div>
+
+<div class="reply">
+	<h3>Reply</h3>
+	<form class="reply-form">
+		<textarea class="reply-msg" placeholder="Your message..."></textarea>
+		<button class="btn reply-btn">Reply</button>
+	</form>
 </div>
