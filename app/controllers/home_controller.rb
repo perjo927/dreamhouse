@@ -16,4 +16,12 @@ class HomeController < ApplicationController
     render 'home/workspace'
   end
 
+  def bathrooms
+    logger.info "@"*100
+    @rooms = Room.all
+    logger.info "#"*100
+    logger.info(@rooms.inspect+"room")
+    render 'home/bathrooms'
+  end
+
 end

@@ -78,4 +78,40 @@ class UserController < ApplicationController
     @object = Room.find(params[:id])
     render 'user/show_object'
   end
+  def editobject
+    @messages = current_user.recent_messages
+    @objects = current_user.rooms
+    @object=Room.find(params[:id])
+    render '/user/editobject'
+  end
+  def changetub
+    @messages = current_user.recent_messages
+    @objects = current_user.rooms
+    @object=Room.find(params[:id])
+    render '/user/changetub'
+  end
+  def savetub
+  @object = Room.find(params[:id])
+  @object.bathtub=params[:name]
+  @object.save
+  redirect_to action: 'editobject', id: params[:id]
+  end
+  def changetiles
+    @messages = current_user.recent_messages
+    @objects = current_user.rooms
+    @object=Room.find(params[:id])
+    render '/user/changetiles'
+  end
+  def savetiles
+    @object = Room.find(params[:id])
+    tilename = params[:name].sub("_", " ")
+    @object.tiles=tilename
+    @object.save
+    redirect_to action: 'editobject', id: params[:id]
+  end
+  def finalizeorder
+    @messages = current_user.recent_messages
+    @objects = current_user.rooms
+    render '/user/finalize'
+  end
 end

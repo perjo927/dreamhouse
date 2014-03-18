@@ -14,6 +14,13 @@ Dreamhouse::Application.routes.draw do
   get '/register', :to => 'user#register'
   get '/user/message/show/:id', :to => 'user#showmessage'
   get '/user/saved_object/:id', :to => 'user#showobject'
+  get '/rooms/bathrooms', :to => 'home#bathrooms'
+  get '/user/saved_object/:id/edit', :to =>'user#editobject'
+  get '/changetub/:id', :to => 'user#changetub'
+  get '/savetub/:id/:name', :to => 'user#savetub'
+  get '/changetiles/:id', :to => 'user#changetiles'
+  get '/savetile/:id/:name', :to =>'user#savetiles'
+  get 'user/saved_object/:id/finalize', :to => 'user#finalizeorder'
   resources :user
 
 

@@ -1,0 +1,18 @@
+<h1>Bathrooms</h1>
+<div class="main">
+    <div class="home">
+
+        <div class="row">
+            <% for room in @rooms %>
+                <div class="grid-third">
+                    <h3><%= room.name %></h3>
+                    <p class="desc">
+                        <%= room.description %>
+                    </p>
+                    <a href="/room/save/<%= room.id %>" class="btn">Spara </a>
+                </div>
+            <% end %>
+        </div>
+
+    </div>
+</div>
