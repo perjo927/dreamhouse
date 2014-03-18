@@ -1,111 +1,113 @@
 <% if current_user.nil? %>
-	<div class="left-nav">
-		<h1>Navigation</h1>
-		<nav>
-			<ul>
-                <li><a href="/">Home</a></li>
-				<li><a href="/rooms/bathrooms">Bathrooms</a></li>
-				<li><a href="#SECTION_OF_PAGE">Kitchen</a></li>
-				<li><a href="#SECTION_OF_PAGE">Bedroom</a></li>
-				<li><a href="#SECTION_OF_PAGE">Living room</a></li>
-				<li><a href="#SECTION_OF_PAGE">Miscellaneous</a></li>
-			</ul>			
-		</nav>
-	</div>	
+<div class="left-nav">
+	<h1>Navigation</h1>
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/rooms/bathrooms">Bathrooms</a></li>
+			<li><a href="#SECTION_OF_PAGE">Kitchen</a></li>
+			<li><a href="#SECTION_OF_PAGE">Bedroom</a></li>
+			<li><a href="#SECTION_OF_PAGE">Living room</a></li>
+			<li><a href="#SECTION_OF_PAGE">Miscellaneous</a></li>
+		</ul>			
+	</nav>
+</div>	
 <% else %>
-	<% if params[:action] == 'workspace' %>
-		<div class="left-nav">
-				<h1>Tools</h1>
-				<div class="tools">
-					<div class="tool">
-						A
-					</div>
-					<div class="tool">
-						B
-					</div>
-					<div class="tool">
-						C
-					</div>
-					<div class="tool">
-						D
-					</div>
-					<div class="tool">
-						E
-					</div>
-					<div class="tool">
-						F
-					</div>
-					<div class="tool">
-						G
-					</div>
-					<div class="tool">
-						H
-					</div>
-					<div class="tool">
-						I
-					</div>
-					<div class="tool">
-						J
-					</div>
-					<div class="tool">
-						K
-					</div>
-					<div class="tool">
-						L
-					</div>
-					<div class="tool">
-						M
-					</div>
-					<div class="tool">
-						N
-					</div>
-					<div class="tool">
-						O
-					</div>
-					<div class="tool">
-						P
-					</div>
-					<div class="tool">
-						Q
-					</div>
-					<div class="tool">
-						R
-					</div>
-					<div class="tool">
-						S
-					</div>
-					<div class="tool">
-						T
-					</div>
-					<div class="tool">
-						U
-					</div>
-					<div class="tool">
-						V
-					</div>
-					<div class="tool">
-						W
-					</div>
-					<div class="tool">
-						X
-					</div>
-				</div>
+<% if params[:action] == 'workspace' %>
+<div class="left-nav">
+	<h1>Tools</h1>
+	<div class="tools">
+		<div class="tool">
+			A
 		</div>
-	<% else %>	
-		<div class="left-nav">
-			<h1>Settings</h1>
-			<nav>
-				<ul>
-					<li><a href="/hantverkare/show">Hantverkare</a></li>
-					<li><a href="#SECTION_OF_PAGE">Inställning #2</a></li>
-					<li><a href="#SECTION_OF_PAGE">Utställning #3</a></li>
-					<li><a href="#SECTION_OF_PAGE">Sneställning #4</a></li>
-					<li><a href="#SECTION_OF_PAGE">Avställning #5</a></li>
-				</ul>			
-			</nav>
-			<a href="/workspace" class="workspace-btn" >Go to Workspace</a>
+		<div class="tool">
+			B
 		</div>
-	<% end %>
+		<div class="tool">
+			C
+		</div>
+		<div class="tool">
+			D
+		</div>
+		<div class="tool">
+			E
+		</div>
+		<div class="tool">
+			F
+		</div>
+		<div class="tool">
+			G
+		</div>
+		<div class="tool">
+			H
+		</div>
+		<div class="tool">
+			I
+		</div>
+		<div class="tool">
+			J
+		</div>
+		<div class="tool">
+			K
+		</div>
+		<div class="tool">
+			L
+		</div>
+		<div class="tool">
+			M
+		</div>
+		<div class="tool">
+			N
+		</div>
+		<div class="tool">
+			O
+		</div>
+		<div class="tool">
+			P
+		</div>
+		<div class="tool">
+			Q
+		</div>
+		<div class="tool">
+			R
+		</div>
+		<div class="tool">
+			S
+		</div>
+		<div class="tool">
+			T
+		</div>
+		<div class="tool">
+			U
+		</div>
+		<div class="tool">
+			V
+		</div>
+		<div class="tool">
+			W
+		</div>
+		<div class="tool">
+			X
+		</div>
+	</div>
+</div>
+<% else %>	
+<div class="left-nav">
+	<h1>Navigation</h1>
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/hantverkare/show">Hantverkare</a></li>
+			<li><a href="/rooms/bathrooms">Bathrooms</a></li>
+			<li><a href="#SECTION_OF_PAGE">Kitchen</a></li>
+			<li><a href="#SECTION_OF_PAGE">Bedroom</a></li>
+			<li><a href="#SECTION_OF_PAGE">Living room</a></li>
+			<li><a href="#SECTION_OF_PAGE">Miscellaneous</a></li>
+		</ul>			
+	</nav>
+	<a href="/workspace" class="workspace-btn" >Go to Workspace</a>
+</div>
+<% end %>
 <% end %>
 
 

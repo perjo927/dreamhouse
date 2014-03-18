@@ -13,4 +13,15 @@ class Room < ActiveRecord::Base
 
   end
 
+  def bathtub 
+    tub = read_attribute :bathtub
+    tub.nil? ? "None" : tub
+  end
+
+  def tiles 
+
+    tiles = read_attribute :tiles
+    tiles.nil? ? "None" : tiles
+  end
+
 end

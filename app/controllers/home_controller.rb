@@ -4,8 +4,8 @@ class HomeController < ApplicationController
     if current_user.nil? 
       render 'home/index' 
     else
-      @messages = current_user.recent_messages
-      @objects = current_user.rooms
+      @messages = current_user.recent_messages.limit 5
+      @objects = current_user.rooms.limit 5
       render 'home/account' 
     end
   end
@@ -17,10 +17,12 @@ class HomeController < ApplicationController
   end
 
   def bathrooms
-    logger.info "@"*100
+
     @rooms = Room.all
-    logger.info "#"*100
-    logger.info(@rooms.inspect+"room")
+    unless current_user.nil?
+      @messages = current_user.recent_messages
+      @objects = current_user.rooms 
+    end
     render 'home/bathrooms'
   end
 

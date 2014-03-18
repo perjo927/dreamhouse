@@ -1,10 +1,33 @@
-<h1><%= @object.name %></h1>
-<div class="description">
-	<%= @object.description %>
-</div>
-<div class="object_type">
-	<%= @object.room_type %>
-</div>
-
-<a href="<%=@object.id%>/edit"><button class="btn">Customize</button></a>
-<a href="<%=@object.id%>/finalize"><button class="btn">Finialize Order</button></a>
+<div class="bathroom">	
+	<h1><%= @object.name %></h1>
+	<img src="/assets/bathroom.jpg" alt="Bathroom Blueprint">
+	<div class="description">
+		<%= @object.description %>
+	</div>
+	<div class="infos">
+		<div class="info-row">
+			<div class="attr">Bathtub:</div>
+			<div class="val"><%= @object.bathtub %></div>
+			<a href="/changetub/<%= @object.id %>"><button class="btn">Change</button></a>
+		</div>
+		<div class="info-row">
+			<div class="attr">Tile:</div>
+			<div class="val"><%= @object.tiles %></div>
+			<a href="/changetiles/<%= @object.id%>"><button class="btn">Change</button></a>
+		</div>
+		<div class="info-row">
+			<div class="attr">Sink:</div>
+			<div class="val">Parigi</div>
+			<a href="#"><button class="btn">Change</button></a>
+		</div>
+		<div class="info-row">
+			<div class="attr">Toilet:</div>
+			<div class="val">Highline Classic</div>
+			<a href="#"><button class="btn">Change</button></a>
+		</div>
+	</div>	
+	<div class="action-btns">
+		<!--<a href="<%=@object.id%>/edit"><button class="btn">Customize</button></a>-->
+		<a href="<%=@object.id%>/finalize"><button class="btn">Finialize Order</button></a>
+	</div>	
+</div>	

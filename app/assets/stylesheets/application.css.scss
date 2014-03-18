@@ -404,6 +404,99 @@ header {
     }
   }
 
+  .bathroom {
+    width: 100%;
+    img {
+      float: left;
+      margin: 5px 0px 5px 5px;
+      width: 300px;
+      height: 187px;
+    }
+    .description {
+      float: right;
+      height: 100px;
+      width: 600px;
+      text-align: left;
+      padding: 10px;
+    }
+    .infos {
+      width: 600px;
+      float: right;
+      .info-row{
+        width: 600px;
+        float: left;
+        &:nth-child(even){
+          background-color: #eee;
+        }
+        div {
+          float: left;
+          padding: 10px;
+          text-align: left;
+        }
+        .attr {
+          width: 100px;
+          font-family: "OpenSansBold"
+        }
+        .val{
+          width: 400px;
+        }
+        .btn {
+          margin: 0;
+
+        }
+      }
+    }
+    .action-btns{
+      width: 100%;
+      float: left;
+
+    }
+  }
+  .customize-header {
+    margin-bottom: 50px;
+  }
+  .tile {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+    h2{
+      text-align: left;
+      width: 80%;
+      float: left;
+    }
+    img {
+      width: 300px;
+      height: 300px;
+      float: left;
+    }
+    .user-comments {
+      float: right;
+      width: 600px;
+      .user-comment {
+        text-align: left;
+        float: left;
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 5px;
+        &:nth-child(odd){
+          background-color: #ddd;
+        }
+      }
+    }
+    .btn {
+      float: right;
+      margin: 0;
+    }
+  }
+  .tub {
+    .description {
+      float: right;
+      width: 600px;
+      text-align: left;
+    }
+  }
+
   .home {
     .row {
       float: left;
@@ -607,10 +700,103 @@ footer {
     }
   }
 }
-.tile{
-  float:left;
-  width: 100%;
-  &:nth-child(2n){
-    background-color: #ddd;
+
+.bold {
+  font-family: "OpenSansBold"
+}
+
+.account {
+
+  .news{
+    width: 300px;
+    float: left;
+    .msg-title{
+      width: 100%;
+      float: left;
+      background-color: #222;
+      padding: 4px;
+      border-radius: 3px;
+      font-size: 10pt;
+      a{
+        color: #ed8000;
+        text-decoration: none;
+        &:hover{
+          color: #eee;
+        }
+      }
+    }
+    .msg-message {
+      float: left;
+      padding: 7px;
+      text-align: left;
+      background-color: #ddd;
+      width: 100%;
+      margin-bottom: 5px;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      height: 70px;
+      white-space: nowrap;
+      overflow: hidden;
+      .sender {
+        padding-top: 10px;
+        font-size: 8pt;
+        font-style: italic;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .projects {
+    width: 300px;
+    height: 500px;
+    float: right;
+    .msg-title{
+      width: 100%;
+      float: left;
+      background-color: #222;
+      padding: 4px;
+      border-radius: 3px;
+      font-size: 10pt;
+      a{
+        color: #ed8000;
+        text-decoration: none;
+        &:hover{
+          color: #eee;
+        }
+      }
+    }
+    .msg-message {
+      float: left;
+      padding: 7px;
+      text-align: left;
+      background-color: #ddd;
+      width: 100%;
+      margin-bottom: 5px;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      height: 70px;
+      white-space: nowrap;
+      overflow: hidden;
+      .sender {
+        padding-top: 10px;
+        font-size: 8pt;
+        font-style: italic;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .pics {
+    width: 300px;
+    height: 500px;
+    float: left;
+    margin-left: 25px;
+    h3{
+      visibility: hidden;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }

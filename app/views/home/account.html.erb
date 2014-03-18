@@ -1,5 +1,42 @@
 <div class="main">
 	<div class="account">
+		<h1>Your Account</h1>
+		<div class="news">
+			<h3>Messages</h3>	
+			<% for message in @messages do %>
+			<div class="msg-title">
+				<a href="/user/message/show/<%= message.id %>"><%= message.title %></a>
+			</div>
+			<div class="msg-message">
+				<%= message.message %>
+				
+			</div>
+			<% end %>
+			<% if @messages.empty? %>
+				No messages
+			<% end %>
+		</div>
+
+		<div class="pics">
+			<h3>Pictures</h3>
+			<img src="/assets/dream.jpg">
+		</div>
+
+		<div class="projects">
+			<h3>Projects</h3>
+			<% for object in @objects do %>
+			<div class="msg-title">
+				<a href="/user/message/show/<%= message.id %>"><%= object.name %></a>
+			</div>
+			<div class="msg-message">
+				<%= object.description %>
+				
+			</div>
+			<% end %>
+			<% if @objects.empty? %>
+				No projects active
+			<% end %>
+		</div>
 	</div>
 </div>
 

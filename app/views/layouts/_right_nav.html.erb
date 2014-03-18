@@ -10,7 +10,7 @@
 	</div>
 
 	<div class="objects">
-		<h3>Saved Objects</h3>
+		<h3>Projects</h3>
         <% for object in @objects.limit(3) %>
             <div class="object">
                <a href="/user/saved_object/<%= object.id %>"> <span><%= object.name %></span></a>

@@ -1,1 +1,46 @@
-<h1>Finalize Order</h1>
+<h1>Finalize project</h1>
+<p>
+	Make sure that everything is properly filled out and then complete your order
+</p>
+<div class="bathroom">	
+	<h1><%= @object.name %></h1>
+	<img src="/assets/bathroom.jpg" alt="Bathroom Blueprint">
+	<div class="description">
+		<%= @object.description %>
+	</div>
+	<div class="infos">
+		<div class="info-row">
+			<div class="attr">Bathtub:</div>
+			<div class="val"><%= @object.bathtub %></div>
+			<div class="cost">155€</div>
+		</div>
+		<div class="info-row">
+			<div class="attr">Tile:</div>
+			<div class="val"><%= @object.tiles %></div>
+			<div class="cost">2050€</div>
+		</div>
+		<div class="info-row">
+			<div class="attr">Sink:</div>
+			<div class="val">Parigi</div>
+			<div class="cost">75€</div>
+		</div>
+		<div class="info-row">
+			<div class="attr">Toilet:</div>
+			<div class="val">Highline Classic</div>
+			<div class="cost">100€</div>
+		</div>
+		<div class="info-row">
+			<div class="attr">Craftsman:</div>
+			<div class="val">Börje Byggman</div>
+			<div class="cost">600€</div>
+		</div>
+		<div class="info-row">
+			<div class="attr">Total:</div>
+			<div class="val"></div>
+			<div class="cost"><span class="bold">2980€</span></div>
+		</div>
+	</div>	
+	<div class="action-btns">
+		<a href="/"><button class="btn">Order Project</button></a>
+	</div>	
+</div>	

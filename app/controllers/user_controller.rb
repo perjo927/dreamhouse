@@ -94,7 +94,7 @@ class UserController < ApplicationController
   @object = Room.find(params[:id])
   @object.bathtub=params[:name]
   @object.save
-  redirect_to action: 'editobject', id: params[:id]
+  redirect_to action: 'showobject', id: params[:id]
   end
   def changetiles
     @messages = current_user.recent_messages
@@ -107,9 +107,10 @@ class UserController < ApplicationController
     tilename = params[:name].sub("_", " ")
     @object.tiles=tilename
     @object.save
-    redirect_to action: 'editobject', id: params[:id]
+    redirect_to action: 'showobject', id: params[:id]
   end
   def finalizeorder
+    @object = Room.find(params[:id])
     @messages = current_user.recent_messages
     @objects = current_user.rooms
     render '/user/finalize'
