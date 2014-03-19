@@ -1,7 +1,7 @@
 
 <div id="error">Error, invalid information</div>
 <div id="success">Success! User created</div>
-<form action="/user/new" method = "post">
+<form id="signupform" action="/user/new" method = "post">
     <% unless params[:id].nil? %>
         <h1>Please Register to save an object</h1>
     <% else %>

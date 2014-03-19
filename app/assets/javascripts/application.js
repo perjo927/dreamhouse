@@ -27,11 +27,11 @@ $(document).ready(function(){
        $('#login-trigger').next('#login-content').slideToggle('fast');
 
     })
-    $("#submit").click(function(e){
+    $("#hhh").click(function(e){
         e.preventDefault();
         $.ajax({
             datatype:'json' ,
-            data: $("#signup-form").serialize(),
+            data: $("#signupform").serialize(),
             type:'POST',
             url:'/user/new',
 
@@ -43,6 +43,7 @@ $(document).ready(function(){
             error: function(){
                 $("#error").show();
                 $("#success").hide();
+                location.reload();
             }
         });
     });

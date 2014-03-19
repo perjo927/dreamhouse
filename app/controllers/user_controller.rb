@@ -1,8 +1,9 @@
 class UserController < ApplicationController
   def new
     #create new user
+    logger.info(params.inspect)
     @user = User.create(:email=>params[:email], :password=>params[:password])
-    if params[:object_id]
+    if (!params[:object_id].blank?)
       room = Room.find(params[:object_id])
       room.user_id = @user.id
       room.save
